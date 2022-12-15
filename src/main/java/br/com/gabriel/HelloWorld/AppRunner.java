@@ -17,7 +17,7 @@ public class AppRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
     long start = System.currentTimeMillis();
-    System.out.println("Thread" + Thread.currentThread().getName());
+    System.out.println("Thread " + Thread.currentThread().getName());
 
         CompletableFuture<String> page1 = asyncService.findUserById(1);
         CompletableFuture<String> page2 = asyncService.findUserById(2);

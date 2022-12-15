@@ -16,7 +16,7 @@ public class AsyncService {
 
 @Async
  public CompletableFuture<String> findUserById(final Integer id){
-        System.out.println("Executing" + Thread.currentThread().getName());
+        System.out.println("Executing " + Thread.currentThread().getName());
         return CompletableFuture.completedFuture(fakeService.findUserById(id));
 }
 }
